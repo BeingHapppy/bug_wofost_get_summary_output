@@ -1,0 +1,21 @@
+Version: 1.0.0
+AgroManagement:
+- 2018-10-20:
+    CropCalendar:
+        crop_name: wheat
+        variety_name: Winter_wheat_105
+        crop_start_date: 2018-10-20
+        crop_start_type: emergence
+        crop_end_date: 2019-06-06
+        crop_end_type: earliest
+        max_duration: 330
+    TimedEvents:
+    StateEvents:
+    -   event_signal: irrigate
+        event_state: SM
+        zero_condition: falling
+        name:  Soil moisture driven irrigation scheduling
+        comment: All irrigation amounts in cm
+        events_table:
+        - 0.1500: {amount:  5.000, efficiency: 0.7}
+- 2019-06-06:
